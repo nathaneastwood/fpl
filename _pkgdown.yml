@@ -1,0 +1,15 @@
+home:
+  strip_header: true
+
+template:
+  params:
+    bootswatch: flatly
+
+navbar:
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+    - icon: fa-file-code-o
+      text: "Functions"
+      href: reference/index.html

@@ -5,3 +5,7 @@
 ^\.vscode$
 ^fpl\.code-workspace$
 ^fpl\.Rproj$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^README\.Rmd$

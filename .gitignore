@@ -1,3 +1,7 @@
 .RData
 .Rhistory
 .DS_Store
+.Rproj.user
+fpl.code-workspace
+fpl.Rproj
+.vscode

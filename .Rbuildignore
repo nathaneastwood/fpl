@@ -1,2 +1,7 @@
 .Rprofile
 ^LICENSE\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.vscode$
+^fpl\.code-workspace$
+^fpl\.Rproj$

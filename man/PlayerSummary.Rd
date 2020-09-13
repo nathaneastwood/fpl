@@ -4,9 +4,10 @@
 \alias{PlayerSummary}
 \title{R6 Class Representing a Player's Historic Data}
 \description{
-R6 Class Representing a Player's Historic Data
-
-R6 Class Representing a Player's Historic Data
+The [FPL$get_player_summary()] and [FPL$get_player_summaries()] methods return objects of class `PlayerSummary`.
+}
+\details{
+Information is taken from <https://fantasy.premierleague.com/api/element-summary/{player_id}/>.
 }
 \examples{
 

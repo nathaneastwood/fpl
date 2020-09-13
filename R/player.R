@@ -69,6 +69,12 @@ Player <- R6::R6Class(
 )
 
 #' R6 Class Representing a Player's Historic Data
+#'
+#' @description
+#' The [FPL$get_player_summary()] and [FPL$get_player_summaries()] methods return objects of class `PlayerSummary`.
+#'
+#' @details
+#' Information is taken from <https://fantasy.premierleague.com/api/element-summary/{player_id}/>.
 PlayerSummary <- R6::R6Class(
   "PlayerSummary",
   public = list(

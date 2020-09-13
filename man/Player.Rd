@@ -31,7 +31,7 @@ active bindings are called.}
 \section{Active bindings}{
 \if{html}{\out{<div class="r6-active-bindings">}}
 \describe{
-\item{\code{games_played}}{`integer(1)`.}
+\item{\code{games_played}}{`integer(1)`. The number of games the player has partaken in this season.}
 
 \item{\code{price}}{`numeric(1)`. The player's in game price.}
 

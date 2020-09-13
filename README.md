@@ -13,8 +13,7 @@ status](https://www.r-pkg.org/badges/version/fpl)](https://cran.r-project.org/pa
 Overview
 --------
 
-{fpl} is an R6 class wrapper around the Barclays Fantasy Premier League
-API.
+{fpl} is an {R6} wrapper around the Barclays Fantasy Premier League API.
 
 Installation
 ------------

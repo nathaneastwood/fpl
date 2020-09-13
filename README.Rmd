@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-{fpl} is an R6 class wrapper around the Barclays Fantasy Premier League API.
+{fpl} is an {R6} wrapper around the Barclays Fantasy Premier League API.
 
 ## Installation
 

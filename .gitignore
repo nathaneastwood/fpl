@@ -6,3 +6,5 @@ fpl.code-workspace
 fpl.Rproj
 .vscode
 docs
+README.html
+build_docs.sh

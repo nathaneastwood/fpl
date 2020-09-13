@@ -8,3 +8,5 @@ fpl.Rproj
 docs
 README.html
 build_docs.sh
+*.tar.gz
+*\.Rcheck

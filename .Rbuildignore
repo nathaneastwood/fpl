@@ -2,12 +2,13 @@
 ^LICENSE\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\.vscode$
-^fpl\.code-workspace$
-^fpl\.Rproj$
+^.*\.Rcheck$
+.*.tar.gz
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
 ^README\.Rmd$
 ^\./inst/figures$
 ^\.github$
+^*\.code-workspace$
+^\.vscode$

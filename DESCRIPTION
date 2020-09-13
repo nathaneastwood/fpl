@@ -3,13 +3,14 @@ Package: fpl
 Title: Fantasy Premier League
 Version: 0.0.0.9001
 Authors@R: person("Nathan", "Eastwood", , "nathan.eastwood@icloud.com", c("aut", "cre"))
-Description: A Wrapper for the Barclays Fantasy Premier League API
+Description: A Wrapper for the Barclays Fantasy Premier League API.
 License: MIT + file LICENSE
 URL: https://github.com/nathaneastwood/fpl
 BugReports: https://github.com/nathaneastwood/fpl/issues
 Depends:
     R (>= 3.6.0)
 Suggests:
+    knitr,
     roxygen2
 VignetteBuilder: knitr
 Encoding: UTF-8

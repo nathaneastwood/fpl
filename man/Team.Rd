@@ -84,7 +84,6 @@ Get information about specific players from the `team`.
 
 \subsection{Returns}{
 A `list` of R6 `Player` objects who play for the `Team`.
-Pretty printing of the `Team`.
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
@@ -100,6 +99,7 @@ Pretty printing of the `Team`.
 \if{html}{\out{<a id="method-print"></a>}}
 \if{latex}{\out{\hypertarget{method-print}{}}}
 \subsection{Method \code{print()}}{
+Pretty printing of the `Team`.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Team$print(...)}\if{html}{\out{</div>}}
 }

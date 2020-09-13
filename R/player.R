@@ -89,7 +89,7 @@ PlayerSummary <- R6::R6Class(
     #' fpl <- FPL$new()
     #' player_summary <- fpl$get_player_summary(250)
     initialize = function(player_id) {
-      data <- jsonlite::fromJSON(paste0("https://fantasy.premierleague.com/api/element-summary/", player_id, "/"))
+      data <- jsonlite::fromJSON(paste0(fpl_env$base_url, "element-summary/", player_id, "/"))
       for (i in names(data)) {
         # In pre-season, data$history will be an empty `list` so set it as a `data.frame`
         # Also, new players will return a `list` for data$history_past

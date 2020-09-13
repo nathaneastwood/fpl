@@ -36,11 +36,12 @@ Team <- R6::R6Class(
     #' A `list` of R6 `Player` objects who play for the `Team`.
     get_players = function() {
       if (nrow(self$players) == 0L) {
-        players <- jsonlite::fromJSON("https://fantasy.premierleague.com/api/bootstrap-static/")$elements
+        players <- jsonlite::fromJSON(paste0(fpl_env$base_url, "bootstrap-static/"))$elements
         self$players <- players[players$team == self$team$id, ]
       }
       get_player_worker(players, self$players$id)
     },
+    #' @description
     #' Pretty printing of the `Team`.
     #' @param ... Not used.
     print = function(...) {

@@ -18,6 +18,13 @@ Information is taken from <https://fantasy.premierleague.com/api/bootstrap-stati
 fpl <- FPL$new()
 
 ## ------------------------------------------------
+## Method `FPL$get_user`
+## ------------------------------------------------
+
+fpl$get_user(555690)
+
+
+## ------------------------------------------------
 ## Method `FPL$get_team`
 ## ------------------------------------------------
 
@@ -91,6 +98,7 @@ fpl$get_player_summaries(c(1, 10, 100))
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{FPL$new()}}
+\item \href{#method-get_user}{\code{FPL$get_user()}}
 \item \href{#method-get_team}{\code{FPL$get_team()}}
 \item \href{#method-get_teams}{\code{FPL$get_teams()}}
 \item \href{#method-get_player}{\code{FPL$get_player()}}
@@ -115,6 +123,35 @@ An R6 `FPL` object.
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{fpl <- FPL$new()
+}
+\if{html}{\out{</div>}}
+
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get_user"></a>}}
+\if{latex}{\out{\hypertarget{method-get_user}{}}}
+\subsection{Method \code{get_user()}}{
+Get information about a specific user.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_user(user_id)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{user_id}}{`numeric(1)`. The user's id.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+An R6 [User()] object.
+}
+\subsection{Examples}{
+\if{html}{\out{<div class="r example copy">}}
+\preformatted{fpl$get_user(555690)
+
 }
 \if{html}{\out{</div>}}
 
@@ -167,7 +204,7 @@ Get information about specific teams.
 \if{html}{\out{</div>}}
 }
 \subsection{Returns}{
-A `list` of R6 `Team` objects.
+A `list` of R6 [Team()] objects.
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
@@ -196,7 +233,7 @@ Get information about a specific player.
 \if{html}{\out{</div>}}
 }
 \subsection{Returns}{
-An R6 `Player` object.
+An R6 [Player()] object.
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
@@ -225,7 +262,7 @@ Get information about specific players.
 \if{html}{\out{</div>}}
 }
 \subsection{Returns}{
-A `list` of R6 `Player` objects.
+A `list` of R6 [Player()] objects.
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
@@ -254,7 +291,7 @@ Get information about a specific player.
 \if{html}{\out{</div>}}
 }
 \subsection{Returns}{
-An R6 `PlayerSummary` object.
+An R6 [PlayerSummary()] object.
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
@@ -283,7 +320,7 @@ Get information about specific players.
 \if{html}{\out{</div>}}
 }
 \subsection{Returns}{
-A `list` of R6 `PlayerSummary` objects.
+A `list` of R6 [PlayerSummary()] objects.
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}

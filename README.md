@@ -1,4 +1,3 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 {fpl} <a href='https://nathaneastwood.github.io/fpl/'><img src='man/figures/logo.png' align="right" height="139" /></a>
@@ -8,7 +7,7 @@
 status](https://www.r-pkg.org/badges/version/fpl)](https://cran.r-project.org/package=fpl)
 [![Dependencies](https://tinyverse.netlify.com/badge/fpl)](https://cran.r-project.org/package=fpl)
 ![CRAN downloads](https://cranlogs.r-pkg.org/badges/fpl)
-![check\_cran](https://github.com/nathaneastwood/fpl/workflows/check_cran/badge.svg?branch=master)
+![check_cran](https://github.com/nathaneastwood/fpl/workflows/check_cran/badge.svg?branch=master)
 
 Overview
 --------
@@ -23,19 +22,21 @@ You can install:
 -   the development version from
     [GitHub](https://github.com/nathaneastwood/fpl) with
 
-<!-- -->
-
-    # install.packages("remotes")
-    remotes::install_github("nathaneastwood/fpl")
+``` r
+# install.packages("remotes")
+remotes::install_github("nathaneastwood/fpl")
+```
 
 Usage
 -----
 
-    library(fpl)
+``` r
+library(fpl)
 
-    fpl <- FPL$new()
-    team <- fpl$get_team(11)
-    team_players <- team$get_players()
+fpl <- FPL$new()
+team <- fpl$get_team(11)
+team_players <- team$get_players()
+```
 
 Related Work
 ------------

@@ -38,9 +38,11 @@ User <- R6::R6Class(
     #' @examples
     #' user$get_gameweek_history()
     get_gameweek_history = function(gameweek = NULL) {
-      valid_gameweek(gameweek)
       private$populate_user_history()
-      if (!is.null(gameweek)) return(self$history$current[self$history$current$event %in% gameweek, ])
+      if (!is.null(gameweek)) {
+        valid_gameweek(gameweek)
+        return(self$history$current[self$history$current$event %in% gameweek, ])
+      }
       self$history$current
     },
     #' @description
@@ -64,9 +66,11 @@ User <- R6::R6Class(
     #' @examples
     #' user$get_gameweek_history()
     get_chips_history = function(gameweek = NULL) {
-      valid_gameweek(gameweek)
       private$populate_user_history()
-      if (!is.null(gameweek)) return(self$history$chips[self$history$chips$event %in% gameweek, ])
+      if (!is.null(gameweek)) {
+        valid_gameweek(gameweek)
+        return(self$history$chips[self$history$chips$event %in% gameweek, ])
+      }
       self$history$chips
     },
     #' @description

@@ -1,7 +1,7 @@
 Type: Package
 Package: fpl
 Title: Fantasy Premier League
-Version: 0.0.0.9004
+Version: 0.0.0.9005
 Authors@R: person("Nathan", "Eastwood", , "nathan.eastwood@icloud.com", c("aut", "cre"))
 Description: A Wrapper for the Barclays Fantasy Premier League API.
 License: MIT + file LICENSE

@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fpl</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9002</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9004</span>
       </span>
     </div>
 
@@ -167,6 +167,7 @@
 
 <ul>
 <li><p><a href='#method-new'><code>FPL$new()</code></a></p></li>
+<li><p><a href='#method-get_user'><code>FPL$get_user()</code></a></p></li>
 <li><p><a href='#method-get_team'><code>FPL$get_team()</code></a></p></li>
 <li><p><a href='#method-get_teams'><code>FPL$get_teams()</code></a></p></li>
 <li><p><a href='#method-get_player'><code>FPL$get_player()</code></a></p></li>
@@ -184,6 +185,23 @@
 <p>An R6 `FPL` object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
 <p><div class="r example copy"></p><pre><span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
+</pre><p></div></p>
+
+<p><hr>
+<a id="method-get_user"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_user()</code></h3>
+<p>Get information about a specific user.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
+<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_user</span>(<span class='kw'>user_id</span>)</pre><p></div></p>
+
+<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
+<p><div class="arguments"></p><dl>
+<dt><code>user_id</code></dt><dd><p>`numeric(1)`. The user's id.</p></dd>
+
+</dl><p></div></p>
+<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
+<p>An R6 [User()] object.</p>
+<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
+<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_user</span>(<span class='fl'>555690</span>)
+
 </pre><p></div></p>
 
 <p><hr>
@@ -214,7 +232,7 @@
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
-<p>A `list` of R6 `Team` objects.</p>
+<p>A `list` of R6 [Team()] objects.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
 <p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_teams</span>(<span class='fl'>1</span>)
 
@@ -231,7 +249,7 @@
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
-<p>An R6 `Player` object.</p>
+<p>An R6 [Player()] object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
 <p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player</span>(<span class='fl'>1</span>)
 
@@ -248,7 +266,7 @@
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
-<p>A `list` of R6 `Player` objects.</p>
+<p>A `list` of R6 [Player()] objects.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
 <p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_players</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span>))
 
@@ -265,7 +283,7 @@
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
-<p>An R6 `PlayerSummary` object.</p>
+<p>An R6 [PlayerSummary()] object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
 <p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span>(<span class='fl'>1</span>)
 
@@ -282,7 +300,7 @@
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
-<p>A `list` of R6 `PlayerSummary` objects.</p>
+<p>A `list` of R6 [PlayerSummary()] objects.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
 <p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summaries</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span>))
 
@@ -308,6 +326,13 @@
 <span class='co'>## ------------------------------------------------</span>
 
 <span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
+
+<span class='co'>## ------------------------------------------------</span>
+<span class='co'>## Method `FPL$get_user`</span>
+<span class='co'>## ------------------------------------------------</span>
+
+<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_user</span>(<span class='fl'>555690</span>)
+</div><div class='output co'>#&gt; [1] "Nathan Eastwood - IwobiAnyTrouble"</div><div class='input'>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `FPL$get_team`</span>

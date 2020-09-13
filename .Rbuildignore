@@ -10,5 +10,5 @@
 ^README\.Rmd$
 ^\./inst/figures$
 ^\.github$
-^*\.code-workspace$
+fpl.code-workspace
 ^\.vscode$

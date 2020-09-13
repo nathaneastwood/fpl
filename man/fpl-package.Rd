@@ -4,12 +4,9 @@
 \name{fpl-package}
 \alias{fpl}
 \alias{fpl-package}
-\title{fpl}
+\title{{fpl}}
 \description{
-fpl
-}
-\details{
-fpl provides access to the Barclays Fantasy Premier League API
+{fpl} provides access to the Barclays Fantasy Premier League API
 }
 \seealso{
 Useful links:

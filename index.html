@@ -92,17 +92,21 @@
 <ul>
 <li>the development version from <a href="https://github.com/nathaneastwood/fpl">GitHub</a> with</li>
 </ul>
-<!-- --><div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># install.packages("remotes")</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"nathaneastwood/fpl"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># install.packages("remotes")</span>
+<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"nathaneastwood/fpl"</span>)
+</pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(fpl)</span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a>fpl &lt;-<span class="st"> </span>FPL<span class="op">$</span><span class="kw">new</span>()</span>
-<span id="cb2-4"><a href="#cb2-4"></a>team &lt;-<span class="st"> </span>fpl<span class="op">$</span><span class="kw">get_team</span>(<span class="dv">11</span>)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>team_players &lt;-<span class="st"> </span>team<span class="op">$</span><span class="kw">get_players</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/nathaneastwood/fpl">fpl</a></span>)
+
+<span class="kw">fpl</span> <span class="op">&lt;-</span> <span class="kw">FPL</span><span class="op">$</span><span class="fu">new</span>()
+<span class="kw">team</span> <span class="op">&lt;-</span> <span class="kw">fpl</span><span class="op">$</span><span class="fu">get_team</span>(<span class="fl">11</span>)
+<span class="kw">team_players</span> <span class="op">&lt;-</span> <span class="kw">team</span><span class="op">$</span><span class="fu">get_players</span>()
+</pre></div>
 </div>
 <div id="related-work" class="section level2">
 <h2 class="hasAnchor">

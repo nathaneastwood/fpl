@@ -2,7 +2,7 @@
 % Please edit documentation in R/user.R
 \name{User}
 \alias{User}
-\title{R6 Class representing a User}
+\title{R6 Class Representing a User}
 \description{
 The [FPL$get_user()] method returns an object of class `User`.
 }

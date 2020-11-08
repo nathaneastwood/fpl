@@ -193,13 +193,13 @@ An R6 `Team` object.
 \subsection{Method \code{get_teams()}}{
 Get information about specific teams.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FPL$get_teams(team_ids = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_teams(team_id = NULL)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{team_ids}}{`numeric(n)`. The team ids.}
+\item{\code{team_id}}{`numeric(n)`. The team ids.}
 }
 \if{html}{\out{</div>}}
 }
@@ -251,13 +251,13 @@ An R6 [Player()] object.
 \subsection{Method \code{get_players()}}{
 Get information about specific players.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FPL$get_players(player_ids)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_players(player_id)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{player_ids}}{`numeric(n)`. The player ids.}
+\item{\code{player_id}}{`numeric(n)`. The player ids.}
 }
 \if{html}{\out{</div>}}
 }
@@ -309,13 +309,13 @@ An R6 [PlayerSummary()] object.
 \subsection{Method \code{get_player_summaries()}}{
 Get information about specific players.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FPL$get_player_summaries(player_ids)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_player_summaries(player_id)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{player_ids}}{`numeric(n)`. The player ids.}
+\item{\code{player_id}}{`numeric(n)`. The player ids.}
 }
 \if{html}{\out{</div>}}
 }

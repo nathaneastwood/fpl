@@ -66,23 +66,21 @@ FPL <- R6::R6Class(
     #' An R6 `Team` object.
     get_team = function(team_id) {
       if (length(team_id) > 1L) stop("`team_id` must be a `numeric(1)`.")
-      if (team_id > 20 || team_id < 1) stop("`team_id` must be between 1 and 20.")
       get_team_worker(self$teams, team_id)[[1L]]
     },
     #' @description
     #' Get information about specific teams.
     #'
-    #' @param team_ids `numeric(n)`. The team ids.
+    #' @param team_id `numeric(n)`. The team ids.
     #'
     #' @examples
     #' fpl$get_teams(1)
     #'
     #' @return
     #' A `list` of R6 [Team()] objects.
-    get_teams = function(team_ids = NULL) {
-      if (is.null(team_ids)) team_ids <- self$teams$id
-      if (any(team_ids > 20 || team_ids < 1)) stop("`team_ids` must be between 1 and 20.")
-      get_team_worker(self$teams, team_ids)
+    get_teams = function(team_id = NULL) {
+      if (is.null(team_id)) team_id <- self$teams$id
+      get_team_worker(self$teams, team_id)
     },
     #' @description
     #' Get information about a specific player.
@@ -105,16 +103,15 @@ FPL <- R6::R6Class(
     #' @description
     #' Get information about specific players.
     #'
-    #' @param player_ids `numeric(n)`. The player ids.
+    #' @param player_id `numeric(n)`. The player ids.
     #'
     #' @examples
     #' fpl$get_players(c(1, 10, 100))
     #'
     #' @return
     #' A `list` of R6 [Player()] objects.
-    get_players = function(player_ids) {
-      if (any(player_ids <= 0)) stop("`player_ids` must be a `numeric(n)`.")
-      get_player_worker(self$elements, player_ids)
+    get_players = function(player_id) {
+      get_player_worker(self$elements, player_id)
     },
     #' @description
     #' Get information about a specific player.
@@ -133,16 +130,16 @@ FPL <- R6::R6Class(
     #' @description
     #' Get information about specific players.
     #'
-    #' @param player_ids `numeric(n)`. The player ids.
+    #' @param player_id `numeric(n)`. The player ids.
     #'
     #' @examples
     #' fpl$get_player_summaries(c(1, 10, 100))
     #'
     #' @return
     #' A `list` of R6 [PlayerSummary()] objects.
-    get_player_summaries = function(player_ids) {
-      if (any(player_ids <= 0)) stop("`player_ids` must be a `numeric(n)`.")
-      get_player_summary_worker(player_ids)
+    get_player_summaries = function(player_id) {
+      if (any(player_id <= 0)) stop("`player_id`(s) must be positive `numeric`(s).")
+      get_player_summary_worker(player_id)
     }
   ),
   active = list(

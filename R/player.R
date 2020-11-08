@@ -10,9 +10,13 @@ Player <- R6::R6Class(
   public = list(
     #' @field player A `data.frame`. Player data for a single player.
     player = data.frame(),
+    #' @field fixtures A `data.frame`. The player's fixture list for the season.
+    fixtures = data.frame(),
     #' @field history A `data.frame`. The current season's data for a given player. Empty by default unless particular
     #' active bindings are called.
     history = data.frame(),
+    #' @field history_past A `data.frame`. The player's summary data for previous seasons.
+    history_past = data.frame(),
     #' @description
     #' Instantiate the `Player` class.
     #'

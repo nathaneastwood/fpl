@@ -12,3 +12,4 @@
 ^\.github$
 fpl.code-workspace
 ^\.vscode$
+^TODO\.md$

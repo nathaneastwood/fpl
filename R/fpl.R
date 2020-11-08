@@ -65,7 +65,7 @@ FPL <- R6::R6Class(
     #' @return
     #' An R6 `Team` object.
     get_team = function(team_id) {
-      if (length(team_id) > 1L) stop("`team_id` must be a `numeric(1)`.")
+      if (length(team_id) > 1L) stop("`team_id` must be a `numeric(1)`, maybe you want `get_teams()`?")
       get_team_worker(self$teams, team_id)[[1L]]
     },
     #' @description
@@ -78,43 +78,46 @@ FPL <- R6::R6Class(
     #'
     #' @return
     #' A `list` of R6 [Team()] objects.
-    get_teams = function(team_id = NULL) {
-      if (is.null(team_id)) team_id <- self$teams$id
-      get_team_worker(self$teams, team_id)
+    get_teams = function(team_ids = NULL) {
+      if (is.null(team_ids)) team_ids <- self$teams$id
+      get_team_worker(self$teams, team_ids)
     },
     #' @description
     #' Get information about a specific player.
     #'
     #' @param player_id `numeric(1)`. The player's id.
+    #' @param include_summary `logical(1)`. Whether to include historical data and fixture details for the player.
     #'
     #' @examples
     #' fpl$get_player(1)
     #'
     #' @return
     #' An R6 [Player()] object.
-    get_player = function(player_id) {
-      if (player_id <= 0 || length(player_id) > 1L) stop("`player_id` must be a `numeric(1)`.")
+    get_player = function(player_id, include_summary = FALSE) {
+      if (player_id <= 0 || length(player_id) > 1L) stop("`player_id` must be a positive `numeric(1)`.")
       player_na <- which(!player_id %in% self$elements$id)
       if (any(player_na)) {
         stop("The following `player_id`s are not available:\n    ", paste(player_id[player_na], collapse = ", "))
       }
-      get_player_worker(self$elements, player_id)[[1L]]
+      get_player_worker(self$elements, player_id, include_summary)[[1L]]
     },
     #' @description
-    #' Get information about specific players.
+    #' Get information about multiple players.
     #'
-    #' @param player_id `numeric(n)`. The player ids.
+    #' @param player_ids `numeric(n)`. The player ids.
+    #' @param include_summary `logical(1)`. Whether to include historical data and fixture details for the player.
     #'
     #' @examples
     #' fpl$get_players(c(1, 10, 100))
     #'
     #' @return
     #' A `list` of R6 [Player()] objects.
-    get_players = function(player_id) {
-      get_player_worker(self$elements, player_id)
+    get_players = function(player_ids = NULL, include_summary = FALSE) {
+      if (is.null(player_ids)) player_ids <- self$elements$id
+      get_player_worker(self$elements, player_ids, include_summary)
     },
     #' @description
-    #' Get information about a specific player.
+    #' Get historical and fixture information about a specific player.
     #'
     #' @param player_id `numeric(1)`. The player's id.
     #'
@@ -128,7 +131,7 @@ FPL <- R6::R6Class(
       get_player_summary_worker(player_id)[[1L]]
     },
     #' @description
-    #' Get information about specific players.
+    #' Get historical and fixture information about multiple players.
     #'
     #' @param player_id `numeric(n)`. The player ids.
     #'

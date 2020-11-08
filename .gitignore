@@ -10,3 +10,4 @@ README.html
 build_docs.sh
 *.tar.gz
 *\.Rcheck
+TODO.md

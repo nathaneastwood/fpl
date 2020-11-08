@@ -23,14 +23,23 @@ get_team_worker = function(teams, team_id) {
 #' @return A `list` of R6 `Player` objects.
 #'
 #' @noRd
-get_player_worker <- function(players, player_id) {
-  # TODO: include_summary
+get_player_worker <- function(players, player_id, include_summary) {
   if (any(player_id <= 0)) stop("`player_id`(s) must be positive `numeric`(s).")
   player_na <- which(!player_id %in% players$id)
   if (any(player_na)) {
     stop("The following `player_id`s are not available:\n    ", paste(player_id[player_na], collapse = ", "))
   }
-  lapply(player_id, function(i) Player$new(players[players$id == i, ]))
+  lapply(
+    player_id,
+    function(i, include_summary) {
+      player <- Player$new(players[players$id == i, ])
+      if (isTRUE(include_summary)) {
+        list2env(mget(c("fixtures", "history", "history_past"), PlayerSummary$new(i)), player)
+      }
+      player
+    },
+    include_summary = include_summary
+  )
 }
 
 #' Get player summary information.

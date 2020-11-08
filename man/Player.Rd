@@ -23,8 +23,12 @@ player <- fpl$get_player(250)
 \describe{
 \item{\code{player}}{A `data.frame`. Player data for a single player.}
 
+\item{\code{fixtures}}{A `data.frame`. The player's fixture list for the season.}
+
 \item{\code{history}}{A `data.frame`. The current season's data for a given player. Empty by default unless particular
 active bindings are called.}
+
+\item{\code{history_past}}{A `data.frame`. The player's summary data for previous seasons.}
 }
 \if{html}{\out{</div>}}
 }

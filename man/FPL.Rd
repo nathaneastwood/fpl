@@ -193,7 +193,7 @@ An R6 `Team` object.
 \subsection{Method \code{get_teams()}}{
 Get information about specific teams.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FPL$get_teams(team_id = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_teams(team_ids = NULL)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -222,13 +222,15 @@ A `list` of R6 [Team()] objects.
 \subsection{Method \code{get_player()}}{
 Get information about a specific player.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FPL$get_player(player_id)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_player(player_id, include_summary = FALSE)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
 \item{\code{player_id}}{`numeric(1)`. The player's id.}
+
+\item{\code{include_summary}}{`logical(1)`. Whether to include historical data and fixture details for the player.}
 }
 \if{html}{\out{</div>}}
 }
@@ -249,15 +251,17 @@ An R6 [Player()] object.
 \if{html}{\out{<a id="method-get_players"></a>}}
 \if{latex}{\out{\hypertarget{method-get_players}{}}}
 \subsection{Method \code{get_players()}}{
-Get information about specific players.
+Get information about multiple players.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FPL$get_players(player_id)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_players(player_ids = NULL, include_summary = FALSE)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{player_id}}{`numeric(n)`. The player ids.}
+\item{\code{player_ids}}{`numeric(n)`. The player ids.}
+
+\item{\code{include_summary}}{`logical(1)`. Whether to include historical data and fixture details for the player.}
 }
 \if{html}{\out{</div>}}
 }
@@ -278,7 +282,7 @@ A `list` of R6 [Player()] objects.
 \if{html}{\out{<a id="method-get_player_summary"></a>}}
 \if{latex}{\out{\hypertarget{method-get_player_summary}{}}}
 \subsection{Method \code{get_player_summary()}}{
-Get information about a specific player.
+Get historical and fixture information about a specific player.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FPL$get_player_summary(player_id)}\if{html}{\out{</div>}}
 }
@@ -307,7 +311,7 @@ An R6 [PlayerSummary()] object.
 \if{html}{\out{<a id="method-get_player_summaries"></a>}}
 \if{latex}{\out{\hypertarget{method-get_player_summaries}{}}}
 \subsection{Method \code{get_player_summaries()}}{
-Get information about specific players.
+Get historical and fixture information about multiple players.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FPL$get_player_summaries(player_id)}\if{html}{\out{</div>}}
 }

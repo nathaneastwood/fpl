@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fpl</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9005</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9006</span>
       </span>
     </div>
 
@@ -157,7 +157,7 @@
 <p><hr>
 <a id="method-new"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>new()</code></h3>
 <p>Instantiate the `Team` class.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>Team</span><span class='op'>$</span><span class='fu'>new</span>(<span class='kw'>team</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>Team</span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='va'>team</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -167,26 +167,26 @@
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>An R6 object of class `Team`.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
-<span class='kw'>team</span> <span class='op'>&lt;-</span> <span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span>(<span class='fl'>11</span>)
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'><a href='FPL.html'>FPL</a></span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>team</span> <span class='op'>&lt;-</span> <span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span><span class='op'>(</span><span class='fl'>11</span><span class='op'>)</span>
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_players"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_players()</code></h3>
 <p>Get information about specific players from the `team`.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>Team</span><span class='op'>$</span><span class='fu'>get_players</span>()</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>Team</span><span class='op'>$</span><span class='fu'>get_players</span><span class='op'>(</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>A `list` of R6 `Player` objects who play for the `Team`.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>team</span><span class='op'>$</span><span class='fu'>get_players</span>()
+<p><div class="r example copy"></p><pre><span class='va'>team</span><span class='op'>$</span><span class='fu'>get_players</span><span class='op'>(</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-print"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code><a href='https://rdrr.io/r/base/print.html'>print()</a></code></h3>
 <p>Pretty printing of the `Team`.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>Team</span><span class='op'>$</span><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='kw'>...</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>Team</span><span class='op'>$</span><span class='fu'>print</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -196,7 +196,7 @@
 <p><hr>
 <a id="method-clone"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>clone()</code></h3>
 <p>The objects of this class are cloneable with this method.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>Team</span><span class='op'>$</span><span class='fu'>clone</span>(deep = <span class='fl'>FALSE</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>Team</span><span class='op'>$</span><span class='fu'>clone</span><span class='op'>(</span>deep <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -212,89 +212,15 @@
 <span class='co'>## Method `Team$new`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
-<span class='kw'>team</span> <span class='op'>&lt;-</span> <span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span>(<span class='fl'>11</span>)
+<span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'><a href='FPL.html'>FPL</a></span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>team</span> <span class='op'>&lt;-</span> <span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span><span class='op'>(</span><span class='fl'>11</span><span class='op'>)</span>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `Team$get_players`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>team</span><span class='op'>$</span><span class='fu'>get_players</span>()
-</div><div class='output co'>#&gt; [[1]]
-#&gt; [1] "Milner"
-#&gt; 
-#&gt; [[2]]
-#&gt; [1] "Tsimikas"
-#&gt; 
-#&gt; [[3]]
-#&gt; [1] "Wijnaldum"
-#&gt; 
-#&gt; [[4]]
-#&gt; [1] "Henderson"
-#&gt; 
-#&gt; [[5]]
-#&gt; [1] "Adrián"
-#&gt; 
-#&gt; [[6]]
-#&gt; [1] "Matip"
-#&gt; 
-#&gt; [[7]]
-#&gt; [1] "Shaqiri"
-#&gt; 
-#&gt; [[8]]
-#&gt; [1] "Chamberlain"
-#&gt; 
-#&gt; [[9]]
-#&gt; [1] "Firmino"
-#&gt; 
-#&gt; [[10]]
-#&gt; [1] "van Dijk"
-#&gt; 
-#&gt; [[11]]
-#&gt; [1] "Mané"
-#&gt; 
-#&gt; [[12]]
-#&gt; [1] "Alisson"
-#&gt; 
-#&gt; [[13]]
-#&gt; [1] "Fabinho"
-#&gt; 
-#&gt; [[14]]
-#&gt; [1] "Salah"
-#&gt; 
-#&gt; [[15]]
-#&gt; [1] "Robertson"
-#&gt; 
-#&gt; [[16]]
-#&gt; [1] "Origi"
-#&gt; 
-#&gt; [[17]]
-#&gt; [1] "Harry Wilson"
-#&gt; 
-#&gt; [[18]]
-#&gt; [1] "Minamino"
-#&gt; 
-#&gt; [[19]]
-#&gt; [1] "Alexander-Arnold"
-#&gt; 
-#&gt; [[20]]
-#&gt; [1] "Gomez"
-#&gt; 
-#&gt; [[21]]
-#&gt; [1] "Keita"
-#&gt; 
-#&gt; [[22]]
-#&gt; [1] "Brewster"
-#&gt; 
-#&gt; [[23]]
-#&gt; [1] "Jones"
-#&gt; 
-#&gt; [[24]]
-#&gt; [1] "Williams"
-#&gt; 
-#&gt; [[25]]
-#&gt; [1] "Elliott"
-#&gt; </div><div class='input'>
+<span class='va'>team</span><span class='op'>$</span><span class='fu'>get_players</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in lapply(player_id, function(i, include_summary) {    player &lt;- Player$new(players[players$id == i, ])    if (isTRUE(include_summary)) {        list2env(mget(c("fixtures", "history", "history_past"),             PlayerSummary$new(i)), player)    }    player}, include_summary = include_summary): argument "include_summary" is missing, with no default</span></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

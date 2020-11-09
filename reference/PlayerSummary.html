@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fpl</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9005</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9006</span>
       </span>
     </div>
 
@@ -156,7 +156,7 @@
 <p><hr>
 <a id="method-new"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>new()</code></h3>
 <p>Instantiate the `PlayerSummary` class.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>PlayerSummary</span><span class='op'>$</span><span class='fu'>new</span>(<span class='kw'>player_id</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>PlayerSummary</span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='va'>player_id</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -166,14 +166,14 @@
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>An R6 object of class `PlayerSummary`.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
-<span class='kw'>player_summary</span> <span class='op'>&lt;-</span> <span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span>(<span class='fl'>250</span>)
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'><a href='FPL.html'>FPL</a></span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>player_summary</span> <span class='op'>&lt;-</span> <span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span><span class='op'>(</span><span class='fl'>250</span><span class='op'>)</span>
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-clone"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>clone()</code></h3>
 <p>The objects of this class are cloneable with this method.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>PlayerSummary</span><span class='op'>$</span><span class='fu'>clone</span>(deep = <span class='fl'>FALSE</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>PlayerSummary</span><span class='op'>$</span><span class='fu'>clone</span><span class='op'>(</span>deep <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -189,8 +189,8 @@
 <span class='co'>## Method `PlayerSummary$new`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
-<span class='kw'>player_summary</span> <span class='op'>&lt;-</span> <span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span>(<span class='fl'>250</span>)
+<span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'><a href='FPL.html'>FPL</a></span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>player_summary</span> <span class='op'>&lt;-</span> <span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span><span class='op'>(</span><span class='fl'>250</span><span class='op'>)</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

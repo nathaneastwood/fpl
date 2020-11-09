@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fpl</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9005</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9006</span>
       </span>
     </div>
 
@@ -179,18 +179,18 @@
 <p><hr>
 <a id="method-new"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>new()</code></h3>
 <p>Instantiate the `FPL` class.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>An R6 `FPL` object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'>FPL</span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_user"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_user()</code></h3>
 <p>Get information about a specific user.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_user</span>(<span class='kw'>user_id</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_user</span><span class='op'>(</span><span class='va'>user_id</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -200,14 +200,14 @@
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>An R6 [User()] object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_user</span>(<span class='fl'>555690</span>)
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_user</span><span class='op'>(</span><span class='fl'>555690</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_team"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_team()</code></h3>
 <p>Get information about a specific team.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_team</span>(<span class='kw'>team_id</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_team</span><span class='op'>(</span><span class='va'>team_id</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -217,65 +217,69 @@
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>An R6 `Team` object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span>(<span class='fl'>1</span>)
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_teams"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_teams()</code></h3>
 <p>Get information about specific teams.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_teams</span>(team_ids = <span class='kw'>NULL</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_teams</span><span class='op'>(</span>team_ids <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
-<dt><code>team_ids</code></dt><dd><p>`numeric(n)`. The team ids.</p></dd>
+<dt><code>team_id</code></dt><dd><p>`numeric(n)`. The team ids.</p></dd>
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>A `list` of R6 [Team()] objects.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_teams</span>(<span class='fl'>1</span>)
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_teams</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_player"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_player()</code></h3>
 <p>Get information about a specific player.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_player</span>(<span class='kw'>player_id</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_player</span><span class='op'>(</span><span class='va'>player_id</span>, include_summary <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
 <dt><code>player_id</code></dt><dd><p>`numeric(1)`. The player's id.</p></dd>
 
+<dt><code>include_summary</code></dt><dd><p>`logical(1)`. Whether to include historical data and fixture details for the player.</p></dd>
+
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>An R6 [Player()] object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player</span>(<span class='fl'>1</span>)
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_players"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_players()</code></h3>
-<p>Get information about specific players.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_players</span>(<span class='kw'>player_ids</span>)</pre><p></div></p>
+<p>Get information about multiple players.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_players</span><span class='op'>(</span>player_ids <span class='op'>=</span> <span class='cn'>NULL</span>, include_summary <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
 <dt><code>player_ids</code></dt><dd><p>`numeric(n)`. The player ids.</p></dd>
 
+<dt><code>include_summary</code></dt><dd><p>`logical(1)`. Whether to include historical data and fixture details for the player.</p></dd>
+
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>A `list` of R6 [Player()] objects.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_players</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span>))
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_players</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_player_summary"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_player_summary()</code></h3>
-<p>Get information about a specific player.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_player_summary</span>(<span class='kw'>player_id</span>)</pre><p></div></p>
+<p>Get historical and fixture information about a specific player.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_player_summary</span><span class='op'>(</span><span class='va'>player_id</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -285,31 +289,31 @@
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>An R6 [PlayerSummary()] object.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span>(<span class='fl'>1</span>)
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-get_player_summaries"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_player_summaries()</code></h3>
-<p>Get information about specific players.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>get_player_summaries</span>(<span class='kw'>player_ids</span>)</pre><p></div></p>
+<p>Get historical and fixture information about multiple players.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_player_summaries</span><span class='op'>(</span><span class='va'>player_id</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
-<dt><code>player_ids</code></dt><dd><p>`numeric(n)`. The player ids.</p></dd>
+<dt><code>player_id</code></dt><dd><p>`numeric(n)`. The player ids.</p></dd>
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
 <p>A `list` of R6 [PlayerSummary()] objects.</p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summaries</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span>))
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summaries</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
 
 </pre><p></div></p>
 
 <p><hr>
 <a id="method-clone"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>clone()</code></h3>
 <p>The objects of this class are cloneable with this method.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>clone</span>(deep = <span class='fl'>FALSE</span>)</pre><p></div></p>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>clone</span><span class='op'>(</span>deep <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre><p></div></p>
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
@@ -325,27 +329,27 @@
 <span class='co'>## Method `FPL$new`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span> <span class='op'>&lt;-</span> <span class='kw'>FPL</span><span class='op'>$</span><span class='fu'>new</span>()
+<span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'>FPL</span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `FPL$get_user`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_user</span>(<span class='fl'>555690</span>)
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_user</span><span class='op'>(</span><span class='fl'>555690</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Nathan Eastwood - IwobiAnyTrouble"</div><div class='input'>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `FPL$get_team`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span>(<span class='fl'>1</span>)
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_team</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Arsenal"</div><div class='input'>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `FPL$get_teams`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_teams</span>(<span class='fl'>1</span>)
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_teams</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt; [1] "Arsenal"
 #&gt; </div><div class='input'>
@@ -354,14 +358,14 @@
 <span class='co'>## Method `FPL$get_player`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player</span>(<span class='fl'>1</span>)
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Özil"</div><div class='input'>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `FPL$get_players`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_players</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span>))
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_players</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt; [1] "Özil"
 #&gt; 
@@ -376,7 +380,7 @@
 <span class='co'>## Method `FPL$get_player_summary`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span>(<span class='fl'>1</span>)
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; &lt;PlayerSummary&gt;
 #&gt;   Public:
 #&gt;     clone: function (deep = FALSE) 
@@ -389,7 +393,7 @@
 <span class='co'>## Method `FPL$get_player_summaries`</span>
 <span class='co'>## ------------------------------------------------</span>
 
-<span class='kw'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summaries</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span>))
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summaries</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>10</span>, <span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt; &lt;PlayerSummary&gt;
 #&gt;   Public:

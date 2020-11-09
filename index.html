@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">fpl</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9005</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9006</span>
       </span>
     </div>
 
@@ -92,21 +92,19 @@
 <ul>
 <li>the development version from <a href="https://github.com/nathaneastwood/fpl">GitHub</a> with</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># install.packages("remotes")</span>
-<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"nathaneastwood/fpl"</span>)
-</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"nathaneastwood/fpl"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/nathaneastwood/fpl">fpl</a></span>)
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/nathaneastwood/fpl">fpl</a></span><span class="op">)</span>
 
-<span class="kw">fpl</span> <span class="op">&lt;-</span> <span class="kw">FPL</span><span class="op">$</span><span class="fu">new</span>()
-<span class="kw">team</span> <span class="op">&lt;-</span> <span class="kw">fpl</span><span class="op">$</span><span class="fu">get_team</span>(<span class="fl">11</span>)
-<span class="kw">team_players</span> <span class="op">&lt;-</span> <span class="kw">team</span><span class="op">$</span><span class="fu">get_players</span>()
-</pre></div>
+<span class="va">fpl</span> <span class="op">&lt;-</span> <span class="va"><a href="reference/FPL.html">FPL</a></span><span class="op">$</span><span class="fu">new</span><span class="op">(</span><span class="op">)</span>
+<span class="va">team</span> <span class="op">&lt;-</span> <span class="va">fpl</span><span class="op">$</span><span class="fu">get_team</span><span class="op">(</span><span class="fl">11</span><span class="op">)</span>
+<span class="va">team_players</span> <span class="op">&lt;-</span> <span class="va">team</span><span class="op">$</span><span class="fu">get_players</span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="related-work" class="section level2">
 <h2 class="hasAnchor">

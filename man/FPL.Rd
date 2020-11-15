@@ -65,6 +65,20 @@ fpl$get_player_summary(1)
 
 fpl$get_player_summaries(c(1, 10, 100))
 
+
+## ------------------------------------------------
+## Method `FPL$get_points_against`
+## ------------------------------------------------
+
+fpl$get_points_against()
+
+
+## ------------------------------------------------
+## Method `FPL$get_fdr`
+## ------------------------------------------------
+
+fpl$get_fdr()
+
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
@@ -105,6 +119,8 @@ fpl$get_player_summaries(c(1, 10, 100))
 \item \href{#method-get_players}{\code{FPL$get_players()}}
 \item \href{#method-get_player_summary}{\code{FPL$get_player_summary()}}
 \item \href{#method-get_player_summaries}{\code{FPL$get_player_summaries()}}
+\item \href{#method-get_points_against}{\code{FPL$get_points_against()}}
+\item \href{#method-get_fdr}{\code{FPL$get_fdr()}}
 \item \href{#method-clone}{\code{FPL$clone()}}
 }
 }
@@ -199,7 +215,7 @@ Get information about specific teams.
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{team_id}}{`numeric(n)`. The team ids.}
+\item{\code{team_ids}}{`numeric(n)`. The team ids.}
 }
 \if{html}{\out{</div>}}
 }
@@ -329,6 +345,54 @@ A `list` of R6 [PlayerSummary()] objects.
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{fpl$get_player_summaries(c(1, 10, 100))
+
+}
+\if{html}{\out{</div>}}
+
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get_points_against"></a>}}
+\if{latex}{\out{\hypertarget{method-get_points_against}{}}}
+\subsection{Method \code{get_points_against()}}{
+Get the points scored against all teams in the Premier League, split by position and location.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_points_against()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+A `data.frame` containing the opponent; the location of the scoring team; the position of the players; and the
+points scored against the opponent.
+}
+\subsection{Examples}{
+\if{html}{\out{<div class="r example copy">}}
+\preformatted{fpl$get_points_against()
+
+}
+\if{html}{\out{</div>}}
+
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get_fdr"></a>}}
+\if{latex}{\out{\hypertarget{method-get_fdr}{}}}
+\subsection{Method \code{get_fdr()}}{
+Creates a new Fixture Difficulty Ranking (FDR) based on the number of points each team gives up to players in the
+Fantasy Premier League. These numbers are also between 1.0 and 5.0 to give a similar ranking system to the
+official FDR.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FPL$get_fdr()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+A `data.frame` containing the opponent; the location of the scoring team; the player position; the fixture
+difficulty for the scoring player against the opponent.
+}
+\subsection{Examples}{
+\if{html}{\out{<div class="r example copy">}}
+\preformatted{fpl$get_fdr()
 
 }
 \if{html}{\out{</div>}}

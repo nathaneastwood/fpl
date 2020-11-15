@@ -42,13 +42,13 @@ player_summary <- fpl$get_player_summary(250)
 \subsection{Method \code{new()}}{
 Instantiate the `PlayerSummary` class.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PlayerSummary$new(player_id)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PlayerSummary$new(player_summary)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{player_id}}{`numeric(1)`. The player's id.}
+\item{\code{player_summary}}{`numeric(1)`. The player's id.}
 }
 \if{html}{\out{</div>}}
 }

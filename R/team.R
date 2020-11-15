@@ -36,7 +36,7 @@ Team <- R6::R6Class(
     #' A `list` of R6 `Player` objects who play for the `Team`.
     get_players = function() {
       if (nrow(self$players) == 0L) {
-        players <- jsonlite::fromJSON(paste0(fpl_env$base_url, "bootstrap-static/"))$elements
+        players <- curl_async(build_url("bootstrap-static"))$elements
         self$players <- players[players$team == self$team$id, ]
       }
       get_player_worker(players, self$players$id)

@@ -91,19 +91,18 @@ PlayerSummary <- R6::R6Class(
     #' @description
     #' Instantiate the `PlayerSummary` class.
     #'
-    #' @param player_id `numeric(1)`. The player's id.
+    #' @param player_summary `numeric(1)`. The player's id.
     #'
     #' @return An R6 object of class `PlayerSummary`.
     #'
     #' @examples
     #' fpl <- FPL$new()
     #' player_summary <- fpl$get_player_summary(250)
-    initialize = function(player_id) {
-      data <- jsonlite::fromJSON(paste0(fpl_env$base_url, "element-summary/", player_id, "/"))
-      for (i in names(data)) {
-        # In pre-season, data$history will be an empty `list` so set it as a `data.frame`
-        # Also, new players will return a `list` for data$history_past
-        self[[i]] <- if (length(data[[i]]) == 0L) data.frame() else data[[i]]
+    initialize = function(player_summary) {
+      for (i in names(player_summary)) {
+        # In pre-season, player_summary$history will be an empty `list` so set it as a `data.frame`
+        # Also, new players will return a `list` for player_summary$history_past
+        self[[i]] <- if (length(player_summary[[i]]) == 0L) data.frame() else player_summary[[i]]
       }
     }
   )

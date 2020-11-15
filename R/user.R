@@ -219,23 +219,19 @@ User <- R6::R6Class(
   private = list(
     populate_user_history = function() {
       if (length(self$history) == 0L) {
-        self$history <- jsonlite::fromJSON(
-          paste0(fpl_env$base_url, "entry/", self$user$id, "/history/")
-        )
+        self$history <- curl_async(build_url("entry", self$user$id, "history"))
       }
     },
     populate_user_cup = function() {
       if (length(self$cup) == 0L) {
-        self$cup <- jsonlite::fromJSON(paste0(fpl_env$base_url, "entry/", self$user$id, "/cup/"))
+        self$cup <- curl_async(build_url("entry", self$user$id, "cup/"))
       }
     },
     populate_user_picks = function() {
       self$picks <- lapply(
         seq(self$user$started_event, self$user$current_event),
         function(i) {
-          data <- jsonlite::fromJSON(
-            paste0(fpl_env$base_url, "entry/", self$user$id, "/event/", i, "/picks/")
-          )
+          data <- curl_async(build_url("entry", self$user$id, "event", i, "picks"))
           data$entry_history <- as.data.frame(data$entry_history)
           data
         }
@@ -243,9 +239,7 @@ User <- R6::R6Class(
     },
     populate_user_transfers = function() {
       if (length(self$transfers) == 0L) {
-        self$transfers <- jsonlite::fromJSON(
-          paste0(fpl_env$base_url, "entry/", self$user$id, "/transfers/")
-        )
+        self$transfers <- curl_async(build_url("entry", self$user$id, "transfers"))
       }
     }
   )

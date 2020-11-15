@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>R6 Class Representing a Player's Historic Data — PlayerSummary • fpl</title>
+<title>Team Converter — team_converter • fpl</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="R6 Class Representing a Player's Historic Data — PlayerSummary" />
-<meta property="og:description" content="The [FPL$get_player_summary()] and [FPL$get_player_summaries()] methods return objects of class `PlayerSummary`." />
+<meta property="og:title" content="Team Converter — team_converter" />
+<meta property="og:description" content="Convert a team's ID to their actual name." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -120,78 +120,37 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>R6 Class Representing a Player's Historic Data</h1>
-    <small class="dont-index">Source: <a href='https://github.com/nathaneastwood/fpl/blob/master/R/player.R'><code>R/player.R</code></a></small>
-    <div class="hidden name"><code>PlayerSummary.Rd</code></div>
+    <h1>Team Converter</h1>
+    <small class="dont-index">Source: <a href='https://github.com/nathaneastwood/fpl/blob/master/R/converters.R'><code>R/converters.R</code></a></small>
+    <div class="hidden name"><code>team_converter.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The [FPL$get_player_summary()] and [FPL$get_player_summaries()] methods return objects of class `PlayerSummary`.</p>
+    <p>Convert a team's ID to their actual name.</p>
     </div>
 
+    <pre class="usage"><span class='fu'>team_converter</span><span class='op'>(</span><span class='va'>teams</span>, <span class='va'>team_id</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>teams</th>
+      <td><p>A `data.frame` containing the teams data. See details for more.</p></td>
+    </tr>
+    <tr>
+      <th>team_id</th>
+      <td><p>`numeric(1)`. The team's id.</p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A `character(1)` containing the team's actual name.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Information is taken from &lt;https://fantasy.premierleague.com/api/element-summary/player_id/&gt;.</p>
-    <h2 class="hasAnchor" id="public-fields"><a class="anchor" href="#public-fields"></a>Public fields</h2>
+    <p>`teams` is typically the output of the teams element of `https://fantasy.premierleague.com/api/bootstrap-static/`.</p>
 
-    <p><div class="r6-fields"></p><dl>
-<dt><code>fixtures</code></dt><dd><p>A `data.frame`. The player's fixture list for the season.</p></dd>
-
-<dt><code>history</code></dt><dd><p>A `data.frame`. The player's data for the current seasom.</p></dd>
-
-<dt><code>history_past</code></dt><dd><p>A `data.frame`. The player's summary data for previous seasons.</p></dd>
-
-</dl><p></div></p>
-    <h2 class="hasAnchor" id="methods"><a class="anchor" href="#methods"></a>Methods</h2>
-
-    
-<h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Public methods</h3>
-
-<ul>
-<li><p><a href='#method-new'><code>PlayerSummary$new()</code></a></p></li>
-<li><p><a href='#method-clone'><code>PlayerSummary$clone()</code></a></p></li>
-</ul>
-<p><hr>
-<a id="method-new"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>new()</code></h3>
-<p>Instantiate the `PlayerSummary` class.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='va'>PlayerSummary</span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='va'>player_summary</span><span class='op'>)</span></pre><p></div></p>
-
-<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
-<p><div class="arguments"></p><dl>
-<dt><code>player_summary</code></dt><dd><p>`numeric(1)`. The player's id.</p></dd>
-
-</dl><p></div></p>
-<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
-<p>An R6 object of class `PlayerSummary`.</p>
-<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
-<p><div class="r example copy"></p><pre><span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'><a href='FPL.html'>FPL</a></span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>player_summary</span> <span class='op'>&lt;-</span> <span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span><span class='op'>(</span><span class='fl'>250</span><span class='op'>)</span>
-</pre><p></div></p>
-
-<p><hr>
-<a id="method-clone"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>clone()</code></h3>
-<p>The objects of this class are cloneable with this method.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
-<p><div class="r"></p><pre><span class='va'>PlayerSummary</span><span class='op'>$</span><span class='fu'>clone</span><span class='op'>(</span>deep <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre><p></div></p>
-
-<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
-<p><div class="arguments"></p><dl>
-<dt><code>deep</code></dt><dd><p>Whether to make a deep clone.</p></dd>
-
-</dl><p></div></p>
-
-
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='co'>## ------------------------------------------------</span>
-<span class='co'>## Method `PlayerSummary$new`</span>
-<span class='co'>## ------------------------------------------------</span>
-
-<span class='va'>fpl</span> <span class='op'>&lt;-</span> <span class='va'><a href='FPL.html'>FPL</a></span><span class='op'>$</span><span class='fu'>new</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>player_summary</span> <span class='op'>&lt;-</span> <span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_player_summary</span><span class='op'>(</span><span class='fl'>250</span><span class='op'>)</span>
-</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

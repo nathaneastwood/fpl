@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fpl</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9006</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9007</span>
       </span>
     </div>
 
@@ -174,6 +174,8 @@
 <li><p><a href='#method-get_players'><code>FPL$get_players()</code></a></p></li>
 <li><p><a href='#method-get_player_summary'><code>FPL$get_player_summary()</code></a></p></li>
 <li><p><a href='#method-get_player_summaries'><code>FPL$get_player_summaries()</code></a></p></li>
+<li><p><a href='#method-get_points_against'><code>FPL$get_points_against()</code></a></p></li>
+<li><p><a href='#method-get_fdr'><code>FPL$get_fdr()</code></a></p></li>
 <li><p><a href='#method-clone'><code>FPL$clone()</code></a></p></li>
 </ul>
 <p><hr>
@@ -228,7 +230,7 @@
 
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Arguments</h4>
 <p><div class="arguments"></p><dl>
-<dt><code>team_id</code></dt><dd><p>`numeric(n)`. The team ids.</p></dd>
+<dt><code>team_ids</code></dt><dd><p>`numeric(n)`. The team ids.</p></dd>
 
 </dl><p></div></p>
 <h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
@@ -311,6 +313,34 @@
 </pre><p></div></p>
 
 <p><hr>
+<a id="method-get_points_against"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_points_against()</code></h3>
+<p>Get the points scored against all teams in the Premier League, split by position and location.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_points_against</span><span class='op'>(</span><span class='op'>)</span></pre><p></div></p>
+
+<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
+<p>A `data.frame` containing the opponent; the location of the scoring team; the position of the players; and the
+points scored against the opponent.</p>
+<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_points_against</span><span class='op'>(</span><span class='op'>)</span>
+
+</pre><p></div></p>
+
+<p><hr>
+<a id="method-get_fdr"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>get_fdr()</code></h3>
+<p>Creates a new Fixture Difficulty Ranking (FDR) based on the number of points each team gives up to players in the
+Fantasy Premier League. These numbers are also between 1.0 and 5.0 to give a similar ranking system to the
+official FDR.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
+<p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>get_fdr</span><span class='op'>(</span><span class='op'>)</span></pre><p></div></p>
+
+<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Returns</h4>
+<p>A `data.frame` containing the opponent; the location of the scoring team; the player position; the fixture
+difficulty for the scoring player against the opponent.</p>
+<h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Examples</h4>
+<p><div class="r example copy"></p><pre><span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_fdr</span><span class='op'>(</span><span class='op'>)</span>
+
+</pre><p></div></p>
+
+<p><hr>
 <a id="method-clone"></a></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Method <code>clone()</code></h3>
 <p>The objects of this class are cloneable with this method.</p><h4 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Usage</h4>
 <p><div class="r"></p><pre><span class='va'>FPL</span><span class='op'>$</span><span class='fu'>clone</span><span class='op'>(</span>deep <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre><p></div></p>
@@ -336,7 +366,7 @@
 <span class='co'>## ------------------------------------------------</span>
 
 <span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_user</span><span class='op'>(</span><span class='fl'>555690</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "Nathan Eastwood - IwobiAnyTrouble"</div><div class='input'>
+</div><div class='output co'>#&gt; [1] "  - "</div><div class='input'>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `FPL$get_team`</span>
@@ -387,7 +417,7 @@
 #&gt;     fixtures: data.frame
 #&gt;     history: data.frame
 #&gt;     history_past: data.frame
-#&gt;     initialize: function (player_id) </div><div class='input'>
+#&gt;     initialize: function (player_summary) </div><div class='input'>
 
 <span class='co'>## ------------------------------------------------</span>
 <span class='co'>## Method `FPL$get_player_summaries`</span>
@@ -401,7 +431,7 @@
 #&gt;     fixtures: data.frame
 #&gt;     history: data.frame
 #&gt;     history_past: data.frame
-#&gt;     initialize: function (player_id) 
+#&gt;     initialize: function (player_summary) 
 #&gt; 
 #&gt; [[2]]
 #&gt; &lt;PlayerSummary&gt;
@@ -410,7 +440,7 @@
 #&gt;     fixtures: data.frame
 #&gt;     history: data.frame
 #&gt;     history_past: data.frame
-#&gt;     initialize: function (player_id) 
+#&gt;     initialize: function (player_summary) 
 #&gt; 
 #&gt; [[3]]
 #&gt; &lt;PlayerSummary&gt;
@@ -419,8 +449,22 @@
 #&gt;     fixtures: data.frame
 #&gt;     history: data.frame
 #&gt;     history_past: data.frame
-#&gt;     initialize: function (player_id) 
+#&gt;     initialize: function (player_summary) 
 #&gt; </div><div class='input'>
+
+<span class='co'>## ------------------------------------------------</span>
+<span class='co'>## Method `FPL$get_points_against`</span>
+<span class='co'>## ------------------------------------------------</span>
+
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_points_against</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in .deserialize_json(json = json, query = query, empty_array = empty_array,     empty_object = empty_object, single_null = single_null, parse_error_ok = parse_error_ok,     on_parse_error = on_parse_error, query_error_ok = query_error_ok,     on_query_error = on_query_error, simplify_to = max_simplify_lvl,     type_policy = type_policy, int64_r_type = int64_policy): The JSON document has an improper structure: missing or superfluous commas, braces, missing keys, etc.</span></div><div class='input'>
+
+<span class='co'>## ------------------------------------------------</span>
+<span class='co'>## Method `FPL$get_fdr`</span>
+<span class='co'>## ------------------------------------------------</span>
+
+<span class='va'>fpl</span><span class='op'>$</span><span class='fu'>get_fdr</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in .deserialize_json(json = json, query = query, empty_array = empty_array,     empty_object = empty_object, single_null = single_null, parse_error_ok = parse_error_ok,     on_parse_error = on_parse_error, query_error_ok = query_error_ok,     on_query_error = on_query_error, simplify_to = max_simplify_lvl,     type_policy = type_policy, int64_r_type = int64_policy): The JSON document has an improper structure: missing or superfluous commas, braces, missing keys, etc.</span></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
